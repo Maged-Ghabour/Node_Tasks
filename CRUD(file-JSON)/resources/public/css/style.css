@@ -1,0 +1,20 @@
+
+
+body{
+    height: 100vh;
+    font-family: 'Cairo';
+}
+footer{
+    position: sticky;
+    top: 100%;
+
+}
+
+table th,
+table td{
+    text-align: center;
+}
+
+textarea{
+    resize: none;
+}

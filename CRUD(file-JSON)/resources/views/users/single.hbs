@@ -1,0 +1,24 @@
+{{>header}}
+{{>navbar}}
+<div class="container mx-auto my-5">
+
+  {{#unless user}}
+  <div class="text-center fs-1 alert alert-danger my-5">Page Not Found</div>
+ 
+  {{else}}
+  <div class="card">
+    <div class="card-header">
+    User Inforamtion
+    </div>
+    <div class="card-body fs-4 text-white text-bold" >
+      <h5 class="card-title text-danger p-1  mx-auto w-50 border rounded"><span class="badge text-bg-dark  p-2 m-3 fs-4">Id : </span> {{user.id}}</h5>
+      <p class="card-text text-danger p-1 mx-auto w-50 border rounded"><span class="badge text-bg-dark p-2 m-3 fs-4">Name : </span> {{user.name}}</p>
+      <p class="card-text text-danger p-1 mx-auto  w-50 border rounded"><span class="badge text-bg-dark p-2 m-3 fs-4">Age : </span>{{user.age}}</p>
+      <p class="card-text text-danger p-1 mx-auto w-50 border rounded"><span class="badge text-bg-dark p-2 m-3 fs-4">Phone : </span>{{user.phone}}</p>
+      <p class="card-text text-danger p-1 mx-auto w-50 border rounded"><span class="badge text-bg-dark p-2 m-3 fs-4">Address : </span>{{user.address}}</p>
+      
+    </div>
+</div>
+ {{/unless}}
+</div>
+{{>footer}}

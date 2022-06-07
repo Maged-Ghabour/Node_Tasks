@@ -1,0 +1,30 @@
+{{>header}}
+{{>navbar}}
+<div class="container my-5" >
+   <form method="get" action="/addPostLogic">
+       <div class="mb-3">
+           <input type="text" class="form-control" name="title" placeholder="Title" >
+       </div>
+          <div class="mb-3">
+            <textarea name="content"  class="form-control"  rows="3" placeholder="content"></textarea>
+       </div>
+
+         <div class="mb-3">
+           <input type="text" class="form-control" name="body" placeholder="body" >
+       </div>
+     
+     <div class="mb-3">
+       <select class="form-control" name="type">
+         <option selected disabled > <span class="text-muted">Select Type of Post</span></option>
+          {{#each types}}
+         <option value="{{this}}">{{this}}</option>
+          {{/each}}
+       </select>
+     </div>
+
+       <div class="mb-3">
+            <button class="btn btn-primary">Add New Post</button>
+       </div>
+   </form>
+</div>
+{{>footer}}

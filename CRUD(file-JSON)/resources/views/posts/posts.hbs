@@ -1,0 +1,43 @@
+{{>header}}
+{{>navbar}}
+   <div class="table-resposive container">
+        <table class="table table-bordered my-5 align-middle ">
+                <thead>
+                    <tr>
+                        <th style="width:3%">ID</th>
+                        <th style="width:20%">Title</th>
+                        <th style="width:20%">Content</th>
+                        <th style="width:20%">Body</th>
+                        <th style="width:20%">Type</th>
+                        <th style="width:22%">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+             
+                  {{#if isEmpty}}
+                    {{#each data}}
+                    <tr>
+                        <td class="text-center">{{this.id}}</td>
+                        <td>{{this.title}}</td>
+                        <td>{{this.content}}</td>
+                        <td>{{this.body}}</td>
+                        <td>{{this.type}}</td>
+                        <td class="text-center">
+                            <a href="/posts/{{this.id}}" class="btn btn-warning btn-sm">Show</a>
+                            <a href="/delPost/{{this.id}}" class="btn btn-sm btn-danger ">Delete</a>
+                            <a href="#" class="btn btn-sm  btn-success">Edit</a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                   
+                    {{else}}
+                    <tr class="alert alert-danger text-center">
+                      <td colspan="6"> No Data</td>
+                  </tr>
+                  {{/if}}
+                </tbody>
+          
+        </table>
+
+   </div>
+{{>footer}}

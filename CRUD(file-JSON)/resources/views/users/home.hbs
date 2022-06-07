@@ -1,0 +1,44 @@
+{{>header}}
+{{>navbar}}
+   <div class="table-resposive container">
+        <table class="table table-bordered my-5 align-middle ">
+                <thead>
+                    <tr>
+                        <th style="width:calc(100% / 7)">ID</th>
+                        <th style="width:calc(100% / 7)">Name</th>
+                        <th style="width:calc(100% / 7)">Age</th>
+                        <th style="width:calc(100% / 7)">phone</th>
+                        <th style="width:calc(100% / 7)">Address</th>
+                        <th style="width:calc(100% / 7)">Description</th>
+                        <th style="width:calc(100% /7)">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+          
+                  {{#if isEmpty}}
+                    {{#each data}}
+                    <tr>
+                        <td>{{this.id}}</td>
+                        <td>{{this.name}}</td>
+                        <td>{{this.age}}</td>
+                        <td>{{this.phone}}</td>
+                        <td>{{this.address}}</td>
+                        <td>{{this.desc}}</td>
+                        <td class="text-center">
+                            <a href="/users/{{this.id}}" class="btn btn-sm btn-warning">Show</a>
+                            <a href="/userdel/{{this.id}}" class="btn btn-sm btn-danger ">Delete</a>
+                            <a href="/updateUser/{{this.id}}" class="btn btn-sm btn-success">Edit</a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                   
+                    {{else}}
+                    <tr class="alert alert-danger text-center">
+                      <td colspan="7"> No Data</td>
+                  </tr>
+                  {{/if}}
+                </tbody>
+        </table>
+
+   </div>
+{{>footer}}

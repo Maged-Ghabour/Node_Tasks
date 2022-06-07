@@ -1,0 +1,35 @@
+{{>header}}
+{{>navbar}}
+<div class="container mx-auto my-5">
+    <div class="card">
+  <div class="card-header">
+   User Inforamtion
+  </div>
+  <div class="card-body fs-4 text-white text-bold" >
+    <p class="card-title bg-warning p-2 m-2">
+      <span class="badge text-bg-primary  p-2 m-2 fs-5">Id : </span>
+      <span class="badge text-bg-dark  p-2 m-2 fs-6"> {{post.id}}</span>
+    </p>
+
+    <p class="card-text bg-warning p-2 m-2">
+      <span class="badge text-bg-primary  p-2 m-2 fs-5">Title : </span>
+       <span class="badge text-bg-dark  p-2 m-2 fs-6">  {{post.title}}</span>
+    </p>
+     <p class="card-text bg-warning p-2 m-2">
+      <span class="badge text-bg-primary  p-2 m-2 fs-5">Body : </span>
+      <span class="badge text-bg-dark  p-2 m-2 fs-6">  {{post.body}}</span>
+    </p>
+     <p class="card-text bg-warning p-2 m-2">
+      <span class="badge text-bg-primary  p-2 m-2 fs-5">Content : </span>
+       <span class="badge text-bg-dark  p-2 m-2 fs-6">  {{post.content}}</span>
+    </p>
+     <p class="card-text bg-warning p-2 m-2">
+      <span class="badge text-bg-primary  p-2 m-2 fs-5">Type : </span>
+       <span class="badge text-bg-dark  p-2 m-2 fs-6">  {{post.type}}</span>
+    </p>
+
+    
+  </div>
+</div>
+</div>
+{{>footer}}
